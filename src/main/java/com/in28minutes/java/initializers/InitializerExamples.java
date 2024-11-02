@@ -2,7 +2,7 @@ package com.in28minutes.java.initializers;
 
 public class InitializerExamples {
 	static int count;
-	static int i;
+	int i;
 	{
 		// This is an instance initializers. Run every time an object is
 		// created.
@@ -18,7 +18,7 @@ public class InitializerExamples {
 		// This is a static initializers. Run only when Class is first loaded.
 		// Only static variables can be accessed
 		System.out.println("Static Initializer");
-		 i = 6;//COMPILER ERROR
+		// i = 6;//COMPILER ERROR
 		System.out.println("Count when Static Initializer is run is " + count);
 	}
 

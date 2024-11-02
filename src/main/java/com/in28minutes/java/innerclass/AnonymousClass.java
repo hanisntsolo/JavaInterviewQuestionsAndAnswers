@@ -13,16 +13,16 @@ public class AnonymousClass {
 
 	private static String[] reverseSort(String[] array) {
 
-		//Comparatar Example just to create a sorting algorithm ==>>>>
 		Comparator<String> reverseComparator = new Comparator<String>() {
 			/* Anonymous Class */
 			@Override
 			public int compare(String string1, String string2) {
 				return string2.compareTo(string1);
 			}
+
 		};
 
-		Arrays.sort(array, reverseComparator); // Need to pass comparator in the sort method to fully use it.
+		Arrays.sort(array, reverseComparator);
 
 		return array;
 	}

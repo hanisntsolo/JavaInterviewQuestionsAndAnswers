@@ -19,7 +19,7 @@ public class ArrayExamples {
 		// Creating an array
 		marks = new int[5]; // 5 is size of array
 
-		// Size of an array is mandatory to create an array // Very Important;
+		// Size of an array is mandatory to create an array
 		// marks = new int[];//COMPILER ERROR
 
 		// Once An Array is created, its size cannot be changed.
@@ -82,7 +82,7 @@ public class ArrayExamples {
 		// COMPILE ERROR!!
 		// int marks4[] = {10,15.0}; //10 is int 15.0 is float
 
-		// Cross assigment of primitive arrays is ILLEGAL - DownCasting is illegal with primitives.
+		// Cross assigment of primitive arrays is ILLEGAL
 		int[] ints = new int[5];
 		short[] shorts = new short[5];
 		// ints = shorts;//COMPILER ERROR
@@ -100,7 +100,7 @@ public class ArrayExamples {
 		// matrixA = new int[][5];//COMPILER ERROR
 		// matrixA = new int[][];//COMPILER ERROR
 
-		// We can create a ragged 2D Array // This is a big and good implementation of matrices that we can create ragged array.
+		// We can create a ragged 2D Array
 		matrixA[0] = new int[3];
 		matrixA[0] = new int[4];
 		matrixA[0] = new int[5];

@@ -41,7 +41,7 @@ public class VariableArgumentExamples {
 			System.out.println("Bark");
 		}
 
-		void bark(Animal... animals) { // can be used with any of the complex types as well.
+		void bark(Animal... animals) {
 			for (Animal animal : animals) {
 				animal.bark();
 			}

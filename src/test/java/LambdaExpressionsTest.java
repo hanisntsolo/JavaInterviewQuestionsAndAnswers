@@ -15,18 +15,17 @@ public class LambdaExpressionsTest {
 		
 		for (int number : numbers)
 			if (number % 2 != 0)
-				sum += number; //State
+				sum += number; 
 		
 		assertEquals(11, sum);
 	}
 
-	//No changes to state of a program.
+	//No changes to state
 	@Test
 	public void sumOfOddNumbers_FunctionalProgrammingExample() {
 		
 		List<Integer> numbers = Arrays.asList(1, 3, 4, 6, 2, 7);
-	// stream => filter => reduce
-		//streams and lambda expression and makes sure that the code in not having any state:
+
 		int sum = numbers.stream() // Create Stream
 				.filter(number -> (number % 2 != 0)) // Intermediate Operation
 				.reduce(0, Integer::sum); // Terminal Operation

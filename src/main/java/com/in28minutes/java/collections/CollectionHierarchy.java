@@ -83,9 +83,9 @@ interface List<E> extends Collection<E> {
 
 	E get(int position);
 
-	E set(int position, E paramE); // Update
+	E set(int position, E paramE);
 
-	void add(int position, E paramE); // add at the end of the  list.
+	void add(int position, E paramE);
 
 	E remove(int paramInt);
 
@@ -113,11 +113,11 @@ class Vector /* implements List<E>, RandomAccess */{
 }
 
 class LinkedList /* implements List<E>, Queue */{
-	// Elements are doubly linked - forward and backword - to one another //
-	// Ideal choice to implement Stack or Queue //
-	// Iteration is slower than ArrayList //
-	// Fast Insertion and Deletion //
-	// Implements Queue interface also. So, supports methods like peek(), poll() //
+	// Elements are doubly linked - forward and backword - to one another
+	// Ideal choice to implement Stack or Queue
+	// Iteration is slower than ArrayList
+	// Fast Insertion and Deletion
+	// Implements Queue interface also. So, supports methods like peek(), poll()
 	// and remove()
 }
 
@@ -128,14 +128,12 @@ class LinkedList /* implements List<E>, Queue */{
 // Unique things only - Does not allow duplication.
 // If obj1.equals(obj2) then only one of them can be in the Set.
 interface Set<E> extends Collection<E> {
- // does not guarantee sorted order
-	// elements are always unique.
+
 }
 
 //Main difference between Set and SortedSet is - an implementation of SortedSet interface 
 //maintains its elements in a sorted order.  Set interface does not guarantee any Order.
 interface SortedSet<E> extends Set<E> {
-	//it does gurantee sorted set.
 
 	SortedSet<E> subSet(E fromElement, E toElement);
 
@@ -167,13 +165,13 @@ interface NavigableSet<E> extends SortedSet<E> {
 // Order of Insertion : A, X , B
 // Possible Order of Storing : X, A ,B
 class HashSet /* implements Set */{
-	// unordered, unsorted - iterates in random order // if there is hash then ordering is not guranteed
+	// unordered, unsorted - iterates in random order
 	// uses hashCode()
 }
 
 // Order of Insertion :A, X, B
 // Order of Storing : A, X, B
-class LinkedHashSet /* implements Set */{ // Maintain the order of insertion.
+class LinkedHashSet /* implements Set */{
 	// ordered - iterates in order of insertion
 	// unsorted
 	// uses hashCode()
@@ -181,7 +179,7 @@ class LinkedHashSet /* implements Set */{ // Maintain the order of insertion.
 
 // Order of Insertion :A,C,B
 // Order of Storing : A,B,C
-class TreeSet /* implements Set,NavigableSet */{ // Sorted Order.
+class TreeSet /* implements Set,NavigableSet */{
 	// 3,5,7
 	// sorted - natural order
 	// implements NavigableSet
@@ -208,7 +206,7 @@ interface Queue<E> extends Collection<E> {
 
 	//Retrieves and removes the head of this queue.
 	//returns null if Queue is empty
-	E poll(); // Always use poll if you dont want exception
+	E poll();
 
 	E element();
 
@@ -251,7 +249,6 @@ interface Deque<E> extends Queue<E> {
 //the queue to become non-empty when retrieving an
 //element, and wait for space to become available in the queue when
 //storing an element.
-// When i want the element to become Available.
 interface BlockingQueue<E> extends Queue<E> {
 	//Same as in Queue Interface
 	//Inserts the specified element into queue IMMEDIATELY 
@@ -289,7 +286,7 @@ interface BlockingQueue<E> extends Queue<E> {
 
 //The elements of the priority queue are ordered 
 //according to their natural ordering
-class PriorityQueue /* implements Queue */{ // implements the queue interface//elementa are stored wiht the ordereing natural  to them
+class PriorityQueue /* implements Queue */{
 	// sorted - natural order
 
 }
@@ -363,7 +360,6 @@ interface Map<K, V> {
 
 // A Map that orders based on the keys. Comparator can be provided at
 // map creation time
-// Order of the key is guranteed//
 interface SortedMap<K, V> extends Map<K, V> {
 	Comparator<? super K> comparator();
 
@@ -420,14 +416,14 @@ class Hashtable /* implements Map */{
 	// Synchronized - Thread Safe - version of HashMap
 	// unsorted, unordered
 	// key's hashCode() is used
-	// HashMap allows a "key with null value. Hashtable doesn't. Very Important"
+	// HashMap allows a key with null value. Hashtable doesn't.
 }
 
 class LinkedHashMap /* implements Map */{
 	// insertion order is maintained (optionally can maintain access order as
 	// well)
 	// slower insertion and deletion
-	// faster iteration //
+	// faster iteration
 }
 
 // A,C,B

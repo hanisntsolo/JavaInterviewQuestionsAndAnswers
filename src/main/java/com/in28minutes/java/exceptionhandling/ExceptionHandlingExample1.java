@@ -109,6 +109,7 @@ public class ExceptionHandlingExample1 {
 		}
 	}
 }
+
 // Connection Opened
 // Connection Closed
 // Exception in thread "main" java.lang.NullPointerException

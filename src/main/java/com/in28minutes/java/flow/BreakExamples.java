@@ -37,7 +37,7 @@ public class BreakExamples {
 
 		System.out.println();
 
-//		 To get out of an outer for loop, label's need to be used// this is important:::
+		// To get out of an outer for loop, label's need to be used
 		outer: for (int j = 0; j < 2; j++) {
 			for (int k = 0; k < 10; k++) {
 				System.out.print(j + "" + k);

@@ -26,6 +26,7 @@ class CricketScorer {
 	public void printScore() {
 		System.out.println("Score : " + score);
 	}
+
 }
 
 public class EncapsulationExample {

@@ -37,7 +37,6 @@ public class StaticModifierExamples {
 
 		// static variables are accessible in static methods
 		staticVariable = 10;
-		String db = "";
 	}
 
 	public void instanceMethod() {
